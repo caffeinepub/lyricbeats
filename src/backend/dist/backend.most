@@ -1,0 +1,22 @@
+// Version: 1.0.0
+type CompositionId__404220762 = Nat;
+type Composition__164365185 =
+  {
+    audioUrl : ?Text;
+    createdAt : Int;
+    id : CompositionId__404220762;
+    lyrics : Text;
+    title : Text
+  };
+type Nat__490723111 = Nat__920180692;
+type Nat__920180692 = Nat;
+actor {
+  stable AI_MUSIC_API_URL : Text;
+  stable compositions :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?Composition__164365185]];
+      var elementIndex : Nat__490723111
+    };
+  stable compositionsState : {var nextCompositionId : Nat}
+};

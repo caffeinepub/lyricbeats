@@ -1,0 +1,44 @@
+type http_request_result = 
+ record {
+   body: blob;
+   headers: vec http_header;
+   status: nat;
+ };
+type http_header = 
+ record {
+   name: text;
+   value: text;
+ };
+type TransformationOutput = 
+ record {
+   body: blob;
+   headers: vec http_header;
+   status: nat;
+ };
+type TransformationInput = 
+ record {
+   context: blob;
+   response: http_request_result;
+ };
+type CreateCompositionRequest = 
+ record {
+   lyrics: text;
+   title: text;
+ };
+type CompositionId = nat;
+type Composition = 
+ record {
+   audioUrl: opt text;
+   createdAt: int;
+   id: CompositionId;
+   lyrics: text;
+   title: text;
+ };
+service : {
+  createComposition: (req: CreateCompositionRequest) -> (Composition);
+  deleteComposition: (id: CompositionId) -> (bool);
+  getComposition: (id: CompositionId) -> (opt Composition) query;
+  listCompositions: () -> (vec Composition) query;
+  transform: (input: TransformationInput) -> (TransformationOutput) query;
+  updateCompositionTitle: (id: CompositionId, title: text) -> (bool);
+}

@@ -1,0 +1,21 @@
+{
+  "overview": "A music creation app where you type song lyrics and instantly generate background music or a full song with one click. Powered by AI music generation.",
+  "features": [
+    "Paste or type song lyrics into a text area",
+    "One-click music generation from lyrics via AI",
+    "Embedded audio player with play/pause/volume controls",
+    "Save compositions with editable titles",
+    "Browse saved songs with lyrics preview and timestamps",
+    "Delete unwanted compositions"
+  ],
+  "category": "tool",
+  "tags": [
+    "music",
+    "ai",
+    "lyrics",
+    "composition",
+    "audio",
+    "generator"
+  ],
+  "last_updated": "2026-04-07T22:31:42.335Z"
+}
